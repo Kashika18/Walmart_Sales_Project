@@ -1,0 +1,6 @@
+flask
+numpy
+scikit-learn
+gunicorn
+pystan
+prophet
