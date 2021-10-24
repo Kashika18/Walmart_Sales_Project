@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title text = 'white'>  SALES FORECASTING
+
+		</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+    <style>
+  body {
+    
+  }
+  </style>
+    </head>
+    <body >
+
+     
+
+        <h2 style="text-align: center;"><b>Sale Forecasting</b></h2><br><hr><br>
+		<center>
+
+
+
+        <form action="/predict" method="POST">
+            <label><h3>See weekly Sales for a Date</h3></label><br>
+            <input type="date" id='date' name='DATE'>
+
+			<br>
+            <input type="submit" value='Predict'><br>
+            <h3>{{pred}}</h3>
+
+        <br><br>
+</form>
+  <hr><br>
+		<form action="/forecastmon" method="POST">
+<label><h3>See monthly Sales</h3></label><br>
+            <select name="MONTH" id="MONTH">
+  <option value="Jan">January</option>
+  <option value="Feb">Feburary</option>
+  <option value="Mar">March</option>
+  <option value="Apr">April</option>
+	<option value="May">May</option>
+	<option value="Jun">June</option>
+	<option value="Jul">July</option>
+	<option value="Aug">Augsut</option>
+	<option value="Sep">September</option>
+	<option value="Oct">October</option>
+	<option value="Nov">November</option>
+	<option value="Dec">December</option>
+	<!-- <option value="Data for whole year">Data for whole year </option> -->
+</select>
+		<br><br>
+
+		<!-- <form action="/forecasty" method="POST"> -->
+
+            <select name="Year" id="Year">
+  <option value="2010">2010</option>
+  <option value="2011">2011</option>
+  <option value="2012">2012</option>
+  <option value="2013">2013</option>
+  <option value="2014">2014</option>
+  <option value="2015">2015</option>
+  <option value="2016">2016</option>
+  <option value="2017">2017</option>
+  <option value="2018">2018</option>
+  <option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	<option value="2022">2022</option>
+	<option value="2023">2023</option>
+	<option value="2024">2024</option>
+	<option value="2025">2025</option>
+	<option value="2026">2026</option>
+	<option value="2027">2027</option>
+  <option value="2028">2028</option>
+</select>
+
+            <input type="submit" value='Predict'><br>
+        <!-- </form> -->
+
+        <h3>{{pred1}}</h3>
+        <!-- <canvas id="linechart" width="900" height="200"></canvas> -->
+        <img src ={{a}} width="100" height="100" >
+
+</form>
+
+			</center>
+
+    </body>
+</html>
